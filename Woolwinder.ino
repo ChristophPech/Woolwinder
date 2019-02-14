@@ -89,7 +89,7 @@ void loop() {
   digitalWrite(LED_BUILTIN, ((cnt/10)&1)!=0);
 
   const int iMin=30;
-  analogWrite(3,iMin + (long(iRPM)*(255-iMin)/1000));
+  analogWrite(2,iMin + (long(iRPM)*(255-iMin)/1000));
 
   if(iRPM<1) return;
   
@@ -154,7 +154,7 @@ void stepperAdvance() {
   };
 
 
-  digitalWrite(2,iRPM>0);
+  digitalWrite(3,iRPM>0);
 
 }
 
